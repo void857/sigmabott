@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="width='device-width'" />
+    <link rel="stylesheet" href="style.css" />
+    <title>üye olmak</title>
+  </head>
+  <body>
+    <h1>Aramıza hoş geldiniz</h1>
+    <br />
+    <p><strong>Devam etmek için lütfen bir hesap oluşturun</strong></p>
+
+    <div class="giris">
+      <input id="email" type="email" placeholder="kullanıcı adınızı girin" />
+      <br />
+      <input
+        id="password"
+        type="password"
+        placeholder="Lütfen şifrenizi buraya giriniz"
+      />
+    </div>
+    <a id="vod" href="anasayfa.html"><strong>giriş işlemine atla</strong></a
+    ><br /><br />
+
+    <button id="hesapKur">hesap oluştur</button>
+    <p></p>
+    <p id="dede"></p>
+
+    <script>
+      document
+        .getElementById("hesapKur")
+        .addEventListener("click", function () {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          if (email === "" || password === "") {
+            document.getElementById("dede").innerHTML =
+              "<strong>Lütfen hesap bilgilerinizi giriniz</strong>";
+          } else {
+            window.location.href = "kurum.html";
+          }
+        });
+    </script>
+  </body>
+</html>
